@@ -1,9 +1,14 @@
 # Exercício 4 (E4) - Análise Sintática com Bison
 
 Considere a linguagem de expressões aritméticas do exercício E1,
-com números inteiros e reais
-(com '.') e os operadores aritméticos ```+  -  *  e  / ```,
+com números inteiros e reais, incluindo negativos,
+expressões entre parênteses
+e os operadores aritméticos ```+  -  *  e  / ```,
 e a função *yylex* implementada no exercício E1.
+
+```
+  (3 + -5) * 10 
+```
 
 Considere a gramática G = (N,T,P,S), com N = {E}, S = E,
 T = {num, +, -, *, /}, sendo os operadores aritméticos
@@ -15,6 +20,10 @@ P:
 E ::= E + E | E - E | E * E | E / E | num
 ```
 
+Faça a extensão dessa gramática pra incluir números negativos e 
+expressão entre parênteses.
+
+O corpo do programa deve conter ao menos uma expressão.
 
 ## Instruções para Configuração do Repositório da Equipe
 
@@ -24,60 +33,25 @@ E ::= E + E | E - E | E * E | E / E | num
 
 ## Descrição Geral
 
-O programa recebe uma expressão aritmética digitada na entrada padrão, 
-apenas uma expressão por linha, 
+O programa recebe uma expressão pela entrada padrão
 e mostra, na saída padrão, uma mensagem:
 "expressão sem erro sintático"
 ou 
 "expressão com erro sintático".
 Se houver erro léxico, ele será reportado como erro sintático.
 
-###  Exemplos
-
-#### Entrada válida
-
-- Entrada:
-
-```90 * 100 / 18.0 - 48 + 77```
-
-- Saída esperada (seguir o padrão):
-
-```
-expressão sem erro sintático.
-```
-
-#### Entrada com dois operadores sem operando entre eles.
-
-- Entrada inválida:
-
-```90 * 100 / 18.0 - + 77```
-
-- Saída esperada:
-
-```
-expressão com erro sintático.
-```
-
-#### Entrada com erro léxico
-
-- Entrada inválida:
-
-```90 ! 100 / 18.0 ```
-
-- Saída esperada:
-
-```
-expressão com erro sintático.
-```
+Se não houver erro sintático, após a mensagem,
+o programa deverá ser interpretado
+e o resultado mostrado na saída padrão.
 
 ### Testes
 
-Considerar, no mínimo os cenários indicados em \tests\cenarios.md.
 Os arquivos de teste devem ser texto simples. Os arquivos de entrada, com uma linha contendo uma expressão aritmética,
 devem ter extensão '.in'; os arquivos com a saída esperada (oráculo) devem ter extensão '.ora' e seguir o formato de
-saída ilustrado nos exemplos anteriores.
+saída ilustrado nos exemplos.
 
-- Definir uma função main() que chama a função yyparse().
+- Definir uma função main() que chama a função yyparse() 
+e depois outra função para interpretar o programa.
 
 ### Testes
 

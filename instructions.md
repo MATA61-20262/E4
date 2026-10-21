@@ -1,4 +1,4 @@
-# Exercício 2 (E2) - Análise Sintática Descendente
+# Exercício 4 (E4) - Análise Sintática com Bison
 
 ## Instruções para Configuração do Repositório da Equipe
 
@@ -9,17 +9,17 @@ Siga os passos abaixo rigorosamente para configurar o ambiente do seu grupo:
 1. Um dos membros da equipe deve acessar o GitHub e criar um novo repositório.
 2. Configure o repositório como **Private** (Privado).
 3. **Não** adicione README, .gitignore ou licença (deixe o repositório completamente vazio).
-4. Nomeie o repositório seguindo o padrão: `MATA61-E2-Grupo-X` (substitua X pelo nome do seu grupo).
+4. Nomeie o repositório seguindo o padrão: `MATA61-E4-Grupo-X` (substitua X pelo nome do seu grupo).
 
 ### 2. Importar o Conteúdo da Especificação
 Abra o terminal na sua máquina e execute os seguintes comandos para clonar o repositório da disciplina e empurrá-lo para o repositório privado do seu grupo:
 
 ```bash
 # Clone o repositório base da disciplina usando a opção --bare
-git clone --bare https://github.com/MATA61-20262/E2.git
+git clone --bare https://github.com/MATA61-20262/E4.git
 
 # Acesse a pasta criada
-cd E2.git
+cd E4.git
 
 # Envie o conteúdo para o novo repositório privado do seu grupo
 # (Substitua a URL abaixo pela URL do repositório que seu grupo criou)
@@ -27,9 +27,9 @@ git push --mirror https://github.com
 
 - Usar tokens de acesso
 
-# Apague a pasta temporária E2.git da sua máquina
+# Apague a pasta temporária E4.git da sua máquina
 cd ..
-rm -rf E2.git
+rm -rf E4.git
 ```
 
 Agora, **clone o repositório privado do seu grupo* normalmente na sua máquina para começar a trabalhar.
@@ -45,9 +45,9 @@ Agora, **clone o repositório privado do seu grupo* normalmente na sua máquina 
 
 Para facilitar a correção, **não faça commits diretamente na branch `main`**. Use o fluxo de Pull Requests (PR):
 
-1. Crie uma branch chamada `e2` (`git checkout -b e2`).
+1. Crie uma branch chamada `e4` (`git checkout -b e4`).
 2. Desenvolva a solução nesta branch.
-3. Abra um **Pull Request** da branch `e2` para a branch `main` dentro do seu repositório.
+3. Abra um **Pull Request** da branch `e4` para a branch `main` dentro do seu repositório.
 4. **Não fazer "Merge" no PR!** 
 O link desse Pull Request aberto será a entrega da equipe na plataforma da disciplina.
 A professora usará este PR para comentar no código e dar a nota.
